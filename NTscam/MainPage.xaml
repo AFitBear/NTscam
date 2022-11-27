@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NTscam.MainPage">
+    <ContentPage.Resources>
+        <Color x:Key="Grås">#2E3D49</Color>
+        <Color x:Key="Hvids">#ffffff</Color>
+        <Color x:Key="Guls">#facc16</Color>
+        <Color x:Key="Blås">#3098a3</Color>
+        <Color x:Key="UdeBlås">#23525c</Color>
+        <Color x:Key="UdeHvid">#54656d</Color>
+        <Color x:Key="MenuGrås">#3c4a55</Color>
+    </ContentPage.Resources>
+        
+    <Grid
+        BackgroundColor="{StaticResource Grås}"
+        RowDefinitions="1*,2*,2*,1*,2*,3*,1.5*,1.5*"
+        ColumnDefinitions="*,*,*,*"
+        >
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Text="Køb Billet"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="End"
+            Margin="0,0,0,10"
+            TextColor="{StaticResource Hvids}"
+            />
+        <Button x:Name="Zoner"
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Text="Antal Zoner"
+            Margin="20"
+            TextColor="{StaticResource Guls}"
+                
+            />
+        <Picker x:Name="picker"
+        Title="Antal Zoner"
+            Grid.Row="4"
+            Grid.Column="0"
+            TitleColor="{StaticResource Hvids}"
+            >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Baboon</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button x:Name="Køb"
+            Grid.Row="6"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Text="Køb Billet"
+            Margin="20"
+            TextColor="{StaticResource Guls}"
+            Clicked="Køb_Clicked"
+            />
+    
+    
+
+
+
+    </Grid>
+
+</ContentPage>

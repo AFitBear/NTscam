@@ -8,7 +8,7 @@
         <Color x:Key="Guls">#facc16</Color>
         <Color x:Key="Blås">#3098a3</Color>
         <Color x:Key="UdeBlås">#23525c</Color>
-        <Color x:Key="UdeHvid">#54656d</Color>
+        <Color x:Key="UdeHvids">#54656d</Color>
         <Color x:Key="MenuGrås">#3c4a55</Color>
     </ContentPage.Resources>
         
@@ -44,13 +44,13 @@
             >
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Baboon</x:String>
-                    <x:String>Capuchin Monkey</x:String>
-                    <x:String>Blue Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Golden Lion Tamarin</x:String>
-                    <x:String>Howler Monkey</x:String>
-                    <x:String>Japanese Macaque</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                    <x:String>6</x:String>
+                    <x:String>7</x:String>
+                    <x:String>8</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
@@ -59,13 +59,67 @@
             Grid.Row="6"
             Grid.Column="0"
             Grid.ColumnSpan="4"
+            FontSize="20"
+            Text="Køb billet"
+            Margin="20"
+            TextColor="{StaticResource UdeHvids}"
+            BackgroundColor="{StaticResource UdeBlås}"
+            Clicked="Køb_Clicked"
+            />
+        <Label x:Name="Pris"
+            Grid.Row="6"
+            Grid.Column="3"
+            Text="0,-"
+            FontSize="20"
+            HorizontalTextAlignment="End"
+            VerticalTextAlignment="Center"
+            Margin="0,0,40,0"
+            TextColor="{StaticResource UdeHvids}"
+            />
+
+        <Frame
+            Grid.Row="7"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            CornerRadius="0"
+            BackgroundColor="{StaticResource MenuGrås}"
+            BorderColor="{StaticResource MenuGrås}"
+            />
+        <Button x:Name="MenuBillet"
+            Grid.Row="7"
+            Grid.Column="0"
+            Text="Billet"
+            Margin="20"
+            TextColor="{StaticResource Guls}"
+            Clicked="MenuBillet_Clicked"
+            />
+        <Button x:Name="MenuKøbBillet"
+            Grid.Row="7"
+            Grid.Column="1"
             Text="Køb Billet"
             Margin="20"
             TextColor="{StaticResource Guls}"
-            Clicked="Køb_Clicked"
+            Clicked="MenuKøbBillet_Clicked"
             />
-    
-    
+        <Button x:Name="MenuStjerne"
+            Grid.Row="7"
+            Grid.Column="2"
+            Text="Stjerne"
+            Margin="20"
+            TextColor="{StaticResource Guls}"
+            Clicked="MenuStjerne_Clicked"
+            />
+        <Button x:Name="MenuEkstra"
+            Grid.Row="7"
+            Grid.Column="3"
+            Text="Ekstra"
+            Margin="20"
+            TextColor="{StaticResource Guls}"
+            Clicked="MenuEkstra_Clicked"
+            />
+
+
+
 
 
 

@@ -13,5 +13,25 @@ public partial class MainPage : ContentPage
     {
 		Test++;
     }
+
+	private void MenuBillet_Clicked(object sender, EventArgs e)
+	{
+
+	}
+
+	private void MenuKøbBillet_Clicked(object sender, EventArgs e)
+	{
+
+	}
+
+	private void MenuStjerne_Clicked(object sender, EventArgs e)
+	{
+
+	}
+
+	private void MenuEkstra_Clicked(object sender, EventArgs e)
+	{
+
+	}
 }
 
